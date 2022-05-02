@@ -1,0 +1,41 @@
+{
+  "name": "react-grpc-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^13.5.0",
+    "google-protobuf": "^3.20.1",
+    "grpc-web": "^1.3.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "generate-grpc": "protoc -I=/Users/chris/playground/grpc-go/helloworld helloworld.proto --js_out=import_style=commonjs,binary:/Users/chris/playground/react-grpc-test/src/grpc --grpc-web_out=import_style=typescript,mode=grpcweb:/Users/chris/playground/react-grpc-test/src/grpc"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 # gRCP with Go, React and TypeScript
 
-![The app in action.](./grpc-app.mov)
+![The app in action.](./grpc-app.gif)
 
 A React TypeScript frontend communicating via websocket over a gRPC proxy to a go gRPC server.
 
@@ -10,10 +10,12 @@ This is a monorepo, while I don't really like the monorepo concept, it just make
 
 ## Step 1: Start up the gRPC Go Server
 
-Start up the 
+Start up the gRPC server with the following commands:
 
 ```shell
-gor run go-grpc/src/server/main.go
+cd grpc-go/src/go-grpc/server
+go mod edit -replace go-grpc/utils=../utils
+go run main.go
 ```
 
 You should see something like 
@@ -55,13 +57,15 @@ First install dependencies:
 cd react-grpc-test && npm install
 ```
 
-Then start it up!
+Then start it up:
 
 ```
 npm run start
 ```
 
-## Why WebSocket and not HTTP/2?
+Type into the textarea to see the magic happen! ✨
+
+## Why WebSocket and not HTTP/2 as Transport Layer?
 
 Until HTTP/2 is better supported in all browsers, it seems that using Websockets as the transport layer for browsers may be the best choice. See: https://github.com/improbable-eng/grpc-web/blob/master/client/grpc-web/docs/transport.md#http/2-based-transports
 
