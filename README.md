@@ -63,10 +63,11 @@ Then start it up:
 npm run start
 ```
 
-Type into the textarea to see the magic happen! ✨
+## Try It!
+
+If you've followed all three steps, you should have a web app open up in your browser - type into the textarea to see the magic happen! ✨ You should also see logging in both the gRPC proxy and the gRPC server.
 
 ## Why WebSocket and not HTTP/2 as Transport Layer?
 
-Until HTTP/2 is better supported in all browsers, it seems that using Websockets as the transport layer for browsers may be the best choice. See: https://github.com/improbable-eng/grpc-web/blob/master/client/grpc-web/docs/transport.md#http/2-based-transports
+Until HTTP/2 is better supported in all browsers, it seems that using a WebSocket as the transport layer for browsers may be the best choice. See: https://github.com/improbable-eng/grpc-web/blob/master/client/grpc-web/docs/transport.md#http/2-based-transports
 
-If you've followed all three steps, you should be able to type in the textarea and get a reversed response response, as well as see logging in both the proxy and the server.
